@@ -24,6 +24,7 @@ export default class SignUp extends Component
     this.setState({ error: '' });
     try {
       await signup(this.state.email, this.state.password);
+
     } catch (error) {
       this.setState({ error: error.message });
     }
@@ -31,7 +32,7 @@ export default class SignUp extends Component
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form id="form-register" onSubmit={this.handleSubmit}>
           <h1>
             Sign Up to
           <Link to="/">Chatty</Link>
