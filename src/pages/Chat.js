@@ -6,7 +6,7 @@ export default class Chat extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        user: auth.currentUser,
+        user: auth?.currentUser,
         chats: [],
         content: '',
         readError: null,
@@ -58,13 +58,13 @@ export default class Chat extends Component {
                   return <p key={chat.timestamp}>{chat.content}</p>
                 })}
               </div>
-              <form onSubmit={this.handleSubmit}>
+              <form id="send-message" onSubmit={this.handleSubmit}>
                 <input onChange={this.handleChange} value={this.state.content}></input>
                 {this.state.error ? <p>{this.state.writeError}</p> : null}
                 <button type="submit">Send</button>
               </form>
               <div>
-                Login in as: <strong>{this.state.user.email}</strong>
+                Login in as: <strong>{this.state.user?.email}</strong>
               </div>
             </div>
           );

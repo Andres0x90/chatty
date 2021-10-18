@@ -6,10 +6,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 jest.mock('../helpers/auth', ()=> 
 ({
-    signup: jest.fn(),
-    signin:  jest.fn(),
-    preventDefault: jest.fn()
-    
+    signup: jest.fn()
 }))
 
 configure({adapter: new Adapter()});

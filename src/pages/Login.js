@@ -54,6 +54,7 @@ export default class Login extends Component {
         <form
           autoComplete="off"
           onSubmit={this.handleSubmit}
+          id="form-login"
         >
           <h1>
             Login to
@@ -93,10 +94,10 @@ export default class Login extends Component {
             Don't have an account? <Link to="/signup">Sign up</Link>
           </p>
           <p>Or</p>
-            <button onClick={this.googleSignIn} type="button">
+            <button id="sign-in-with-google" onClick={this.googleSignIn} type="button">
                 Sign up with Google
             </button>
-            <button type="button" onClick={this.githubSignIn}>
+            <button id="sign-in-with-github" type="button" onClick={this.githubSignIn}>
                  Sign up with GitHub
             </button>
         </form>
